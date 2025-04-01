@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_76a0037354f208adfcc4bd78d2ffd620 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            top: 10px; left: 10px; width: 250px; height: auto; 
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px; border-radius: 5px; z-index:9999;
+            font-size: 12px; font-weight: bold;">
+    <b>Total Data</b><br>
+    Total Target: 53,263<br>
+    Total Response: 8,387<br>
+    Response Rate: 15.70%<br>
+    Total Cost: 106,280<br>
+    Total Avg Rake: 18.4<br>
+    cROI: -0.1
+</div>
+    
+            <div class="folium-map" id="map_76a0037354f208adfcc4bd78d2ffd620" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_76a0037354f208adfcc4bd78d2ffd620 = L.map(
+                "map_76a0037354f208adfcc4bd78d2ffd620",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_23e662045a57390165051bf758f957ea = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_23e662045a57390165051bf758f957ea.addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            var circle_marker_29682afcbeac3591fcc684c6405eeea4 = L.circleMarker(
+                [-14.2, -51.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_29682afcbeac3591fcc684c6405eeea4.bindTooltip(
+                `<div>
+                     
+    <b>B2B-Brazil</b><br>
+    cROI: <b>-3.1</b><br>
+    Avg Rake: 11.9<br>
+    Response Rate: 17.60%<br>
+    Cost: 10095<br>
+    Target: 4280
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72d53ce9898ea7d08d11692f58bacaab = L.circleMarker(
+                [36.2, 138.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_72d53ce9898ea7d08d11692f58bacaab.bindTooltip(
+                `<div>
+                     
+    <b>B2B-Japan</b><br>
+    cROI: <b>0.3</b><br>
+    Avg Rake: 8.3<br>
+    Response Rate: 9.10%<br>
+    Cost: 2480<br>
+    Target: 1978
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4cb52127e23fc66446ba746ffe8bba8 = L.circleMarker(
+                [1.4, 103.8],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_f4cb52127e23fc66446ba746ffe8bba8.bindTooltip(
+                `<div>
+                     
+    <b>B2B-N8-SEA</b><br>
+    cROI: <b>1.5</b><br>
+    Avg Rake: 32.5<br>
+    Response Rate: 10.10%<br>
+    Cost: 4115<br>
+    Target: 3352
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e6c645971534b106404ecb8d4841c9f = L.circleMarker(
+                [9.1, 8.7],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_7e6c645971534b106404ecb8d4841c9f.bindTooltip(
+                `<div>
+                     
+    <b>B2B-Nigeria</b><br>
+    cROI: <b>0.1</b><br>
+    Avg Rake: 2.0<br>
+    Response Rate: 12.50%<br>
+    Cost: 25<br>
+    Target: 8
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8502ae39b6c762260e6ef4ac9dd52046 = L.circleMarker(
+                [45.9, 24.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_8502ae39b6c762260e6ef4ac9dd52046.bindTooltip(
+                `<div>
+                     
+    <b>B2B-Romania</b><br>
+    cROI: <b>0.0</b><br>
+    Avg Rake: 15.8<br>
+    Response Rate: 19.90%<br>
+    Cost: 2515<br>
+    Target: 965
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51ed04ce958daf586b44a98ab4196000 = L.circleMarker(
+                [55.7, 37.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_51ed04ce958daf586b44a98ab4196000.bindTooltip(
+                `<div>
+                     
+    <b>CIS</b><br>
+    cROI: <b>-0.4</b><br>
+    Avg Rake: 13.5<br>
+    Response Rate: 19.10%<br>
+    Cost: 34705<br>
+    Target: 12450
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b9e0bf02efd9ecfc43076fac6e6b08b = L.circleMarker(
+                [51.2, 10.5],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_3b9e0bf02efd9ecfc43076fac6e6b08b.bindTooltip(
+                `<div>
+                     
+    <b>Germany</b><br>
+    cROI: <b>0.1</b><br>
+    Avg Rake: 13.6<br>
+    Response Rate: 16.30%<br>
+    Cost: 5420<br>
+    Target: 2858
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a16434175d456896d3d2585481bec084 = L.circleMarker(
+                [47.5, 14.5],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_a16434175d456896d3d2585481bec084.bindTooltip(
+                `<div>
+                     
+    <b>Global-Austria</b><br>
+    cROI: <b>2.8</b><br>
+    Avg Rake: 57.1<br>
+    Response Rate: 15.60%<br>
+    Cost: 2765<br>
+    Target: 1144
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6f93c7febc55a8cfbee9acd5334aa8b = L.circleMarker(
+                [56.1, -106.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_a6f93c7febc55a8cfbee9acd5334aa8b.bindTooltip(
+                `<div>
+                     
+    <b>Global-Canada-Rest</b><br>
+    cROI: <b>0.9</b><br>
+    Avg Rake: 15.1<br>
+    Response Rate: 13.50%<br>
+    Cost: 4590<br>
+    Target: 2536
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44dedf3c425f44d0bcad1870d749fbf5 = L.circleMarker(
+                [61.9, 25.7],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_44dedf3c425f44d0bcad1870d749fbf5.bindTooltip(
+                `<div>
+                     
+    <b>Global-Finland</b><br>
+    cROI: <b>1.2</b><br>
+    Avg Rake: 20.1<br>
+    Response Rate: 20.30%<br>
+    Cost: 955<br>
+    Target: 335
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eeaf6463fe7c5f1d67878ce694e2458c = L.circleMarker(
+                [47.2, 19.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_eeaf6463fe7c5f1d67878ce694e2458c.bindTooltip(
+                `<div>
+                     
+    <b>Global-Hungary</b><br>
+    cROI: <b>-0.1</b><br>
+    Avg Rake: 5.1<br>
+    Response Rate: 23.60%<br>
+    Cost: 655<br>
+    Target: 212
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85b94dcec56b4bbbe82a373390306e39 = L.circleMarker(
+                [-14.6, -60.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_85b94dcec56b4bbbe82a373390306e39.bindTooltip(
+                `<div>
+                     
+    <b>Global-LATAM</b><br>
+    cROI: <b>1.5</b><br>
+    Avg Rake: 34.4<br>
+    Response Rate: 15.70%<br>
+    Cost: 7405<br>
+    Target: 3487
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60e83ee24fd83240f4c27c60b4451e9e = L.circleMarker(
+                [51.9, 19.1],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_60e83ee24fd83240f4c27c60b4451e9e.bindTooltip(
+                `<div>
+                     
+    <b>Global-Poland</b><br>
+    cROI: <b>1.0</b><br>
+    Avg Rake: 23.9<br>
+    Response Rate: 18.10%<br>
+    Cost: 2345<br>
+    Target: 800
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33e51f0b65fff6bbed69d1634c911425 = L.circleMarker(
+                [0.0, 30.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_33e51f0b65fff6bbed69d1634c911425.bindTooltip(
+                `<div>
+                     
+    <b>Global-ROW</b><br>
+    cROI: <b>0.0</b><br>
+    Avg Rake: 26.1<br>
+    Response Rate: 14.50%<br>
+    Cost: 13705<br>
+    Target: 6313
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96581674438e72259a2c4fca511ad9bb = L.circleMarker(
+                [53.3, -8.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_96581674438e72259a2c4fca511ad9bb.bindTooltip(
+                `<div>
+                     
+    <b>Ireland</b><br>
+    cROI: <b>-2.0</b><br>
+    Avg Rake: 6.5<br>
+    Response Rate: 13.00%<br>
+    Cost: 605<br>
+    Target: 324
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3e354464542bce055180f632d4976d4 = L.circleMarker(
+                [52.1, 5.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_a3e354464542bce055180f632d4976d4.bindTooltip(
+                `<div>
+                     
+    <b>Netherlands</b><br>
+    cROI: <b>-0.2</b><br>
+    Avg Rake: 10.8<br>
+    Response Rate: 15.60%<br>
+    Cost: 3055<br>
+    Target: 1631
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3c6768ac617755b267add07e0ce7a3f = L.circleMarker(
+                [13.4, 121.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_c3c6768ac617755b267add07e0ce7a3f.bindTooltip(
+                `<div>
+                     
+    <b>Philippines</b><br>
+    cROI: <b>-0.7</b><br>
+    Avg Rake: 12.5<br>
+    Response Rate: 9.90%<br>
+    Cost: 215<br>
+    Target: 161
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e9502c8b7a633aa073450ff87e9e0e09 = L.circleMarker(
+                [51.5, -0.1],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_e9502c8b7a633aa073450ff87e9e0e09.bindTooltip(
+                `<div>
+                     
+    <b>UK</b><br>
+    cROI: <b>0.6</b><br>
+    Avg Rake: 11.5<br>
+    Response Rate: 12.70%<br>
+    Cost: 5675<br>
+    Target: 3469
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06bd7cf68f31a3a06d04ae24caa09ec7 = L.circleMarker(
+                [48.4, 31.2],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_76a0037354f208adfcc4bd78d2ffd620);
+        
+    
+            circle_marker_06bd7cf68f31a3a06d04ae24caa09ec7.bindTooltip(
+                `<div>
+                     
+    <b>Ukraine</b><br>
+    cROI: <b>0.2</b><br>
+    Avg Rake: 10.6<br>
+    Response Rate: 19.00%<br>
+    Cost: 4955<br>
+    Target: 1658
+    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
